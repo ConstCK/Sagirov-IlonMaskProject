@@ -15,7 +15,6 @@ function MainPage() {
         backgroundPosition: "center",
       }}
     >
-      <div className="circle"></div>
       <Header />
       <Main />
     </main>

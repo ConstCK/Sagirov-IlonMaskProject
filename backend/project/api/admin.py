@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import Profits
+from .models import Profits, FlightSchedule
 
-admin.register(Profits)
+admin.site.register(Profits)
+admin.site.register(FlightSchedule)

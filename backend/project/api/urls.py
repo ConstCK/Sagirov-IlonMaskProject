@@ -1,5 +1,11 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
+from .views import ProfitsViewSet, FlightScheduleViewSet
+
+router = routers.DefaultRouter()
+router.register('profits', ProfitsViewSet)
+router.register('schedule', FlightScheduleViewSet)
 
 urlpatterns = [
-    # path('profits/', admin.site.urls),
+    path('api/v1/', include(router.urls)),
 ]
