@@ -1,0 +1,26 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    width: 100%;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.nav a {
+    color: rgba(255, 255, 255, .8);
+    margin: 20px;
+    padding: 10px 0;
+    white-space: nowrap;
+}
+
+.nav a:hover {
+    border-bottom: 1px white solid;
+    color: rgba(255, 255, 255, .4);
+}
+
+@media (min-width: 993px) and (max-width: 1440px) {
+    .nav {
+        font-size: 12px;
+    }
+}

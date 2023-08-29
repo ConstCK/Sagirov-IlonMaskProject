@@ -1,0 +1,103 @@
+/* Burger menu animation */
+.menuButtonClosed {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    margin: 30px 0 30px 30px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.menuButtonOpened {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    margin: 30px 0 30px 30px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menuButtonClosed div {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    right: 10px;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.menuButtonOpened div {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    right: 10px;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.menuButtonClosed div:nth-child(1) {
+    top: 0px;
+}
+
+.menuButtonClosed div:nth-child(2) {
+    top: 9px;
+}
+
+.menuButtonClosed div:nth-child(3) {
+    top: 18px;
+}
+
+.menuButtonOpened div:nth-child(1) {
+    top: 12px;
+    transform: rotate(135deg);
+}
+
+.menuButtonOpened div:nth-child(2) {
+    display: none;
+    left: -60px;
+}
+
+.menuButtonOpened div:nth-child(3) {
+    top: 12px;
+    transform: rotate(-135deg);
+}
+
+.menuHidden {
+    display: none;
+}
+
+.menuVisible {
+    position: absolute;
+    right: 15%;
+    left: 15%;
+    top: 20%;
+    min-width: 70%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    background-color: rgba(256, 256, 256, 0.6);
+    border-radius: 0 25% 25% 25%;
+    box-shadow: 4px 2px black;
+}
+
+.menuVisible .link {
+    padding: 15px;
+
+}
+
+.menuVisible a {
+    color: rgba(0, 0, 0, .8);
+    padding: 5px 0;
+}
+
+.menuVisible a:hover {
+    border-bottom: 1px black solid;
+    color: rgba(0, 0, 0, .4);
+}
