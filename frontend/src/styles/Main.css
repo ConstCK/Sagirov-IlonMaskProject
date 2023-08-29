@@ -22,7 +22,7 @@
     background: none;
     border: 1.5px #192c48 solid;
     border-image: linear-gradient(to right top, #0d1623, #214b78) 1;
-    border-image: linear-gradient(to left bottom, #0d1623, #214b78) 1;
+
     background:
         linear-gradient(to right, white 1px, transparent 1px) 0 100%,
         linear-gradient(to left, white 1px, transparent 1px) 100% 0,
@@ -34,6 +34,10 @@
     color: rgba(255, 255, 255, .8);
     margin-top: 50px;
     padding: 10px 25px;
+}
+
+.go-btn:hover {
+    border-image: linear-gradient(to left bottom, #0d1623, #214b78) 1;
 }
 
 .title {
