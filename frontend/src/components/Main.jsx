@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/Main.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getProfits } from "../api/dataService";
 
 const Main = () => {
   const navigate = useNavigate();
+  const refGoButton = useRef(null);
   const [profitsData, setProfitsData] = useState([]);
+  const [coords, setCoords] = useState([]);
 
   useEffect(() => {
+    setCoords([refGoButton.current.offsetLeft, refGoButton.current.offsetTop]);
     getProfits(setProfitsData);
   }, []);
+
   const handleGo = () => {
     navigate("#");
   };
+
   return (
     <main className="main">
       <div className="left-container">
@@ -21,12 +26,12 @@ const Main = () => {
           <h3 className="second-part-title">на красную планету</h3>
         </div>
         <div className="go-link">
-          <button onClick={handleGo} className="go-btn">
+          <button ref={refGoButton} onClick={handleGo} className="go-btn">
             Начать путешествие
           </button>
         </div>
       </div>
-      <div className="middle-container"></div>
+      <div className="middle-container">{/* <Canvas coords={coords} /> */}</div>
       <div className="right-container">
         {
           <div className="profits-table">
@@ -42,7 +47,10 @@ const Main = () => {
             </div>
             <div className="profits-cell">
               <div>календарик за</div>
-              <div className="profits-data">{profitsData.calendar}</div>
+              <div className="profits-data">
+                {profitsData.calendar}
+                <span className="year">г.</span>
+              </div>
               <div>в подарок</div>
             </div>
             <div className="profits-cell">

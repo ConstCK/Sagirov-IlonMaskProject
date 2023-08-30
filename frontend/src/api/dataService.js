@@ -8,7 +8,6 @@ const getProfits = async (setter) => {
     method: "get",
   })
     .then((response) => {
-      console.log(response.data);
       setter(response.data[0]);
     })
     .catch((err) => {

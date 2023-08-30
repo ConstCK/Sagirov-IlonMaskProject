@@ -5,7 +5,8 @@ from django.db import models
 class Profits(models.Model):
     position = models.PositiveIntegerField(verbose_name='Место')
     safety = models.CharField(max_length=32, verbose_name='Безопасность')
-    calendar = models.CharField(max_length=32, verbose_name='Календарь')
+    calendar = models.PositiveSmallIntegerField (validators=[MinValueValidator(2000), MaxValueValidator(2100)],
+                                                 verbose_name='Календарь')
     trip = models.PositiveIntegerField(verbose_name='Путешествие')
     created_at = models.DateTimeField(auto_now=True)
 
