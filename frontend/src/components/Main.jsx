@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "../styles/Main.css";
 import { useNavigate } from "react-router-dom";
 import { getProfits } from "../api/dataService";
+import { Line } from "react-lineto";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -31,35 +32,33 @@ const Main = () => {
           </button>
         </div>
       </div>
-      <div className="middle-container">{/* <Canvas coords={coords} /> */}</div>
+      <div className="middle-container"></div>
       <div className="right-container">
-        {
-          <div className="profits-table">
-            <div className="profits-cell">
-              <div>Мы</div>
-              <div className="profits-data">{profitsData.position}</div>
-              <div>на рынке</div>{" "}
-            </div>
-            <div className="profits-cell">
-              <div>гарантируем</div>
-              <div className="profits-data">{profitsData.safety}</div>
-              <div>безопасность</div>
-            </div>
-            <div className="profits-cell">
-              <div>календарик за</div>
-              <div className="profits-data">
-                {profitsData.calendar}
-                <span className="year">г.</span>
-              </div>
-              <div>в подарок</div>
-            </div>
-            <div className="profits-cell">
-              <div>путешествие за</div>
-              <div className="profits-data">{profitsData.trip}</div>
-              <div>дней</div>
-            </div>
+        <div className="profits-table">
+          <div className="profits-cell">
+            <div>Мы</div>
+            <div className="profits-data">{profitsData.position}</div>
+            <div>на рынке</div>
           </div>
-        }
+          <div className="profits-cell">
+            <div>гарантируем</div>
+            <div className="profits-data">{profitsData.safety}</div>
+            <div>безопасность</div>
+          </div>
+          <div className="profits-cell">
+            <div>календарик за</div>
+            <div className="profits-data">
+              {profitsData.calendar}
+              <span className="year">г.</span>
+            </div>
+            <div>в подарок</div>
+          </div>
+          <div className="profits-cell">
+            <div>путешествие за</div>
+            <div className="profits-data">{profitsData.trip}</div>
+            <div>дней</div>
+          </div>
+        </div>
       </div>
     </main>
   );

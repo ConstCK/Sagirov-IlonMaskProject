@@ -16,8 +16,8 @@ body {
     font-family: "Nunito sans regular", Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    min-width: 99%;
-    height: 100vh;
+    min-width: 99vw;
+    height: 99vh;
     font-size: 14px;
     line-height: 1;
     overflow-x: hidden;

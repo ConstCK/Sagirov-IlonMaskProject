@@ -21,6 +21,7 @@
     "html-webpack-plugin": "^5.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-lineto": "^3.3.0",
     "react-router-dom": "^6.11.2",
     "style-loader": "^3.3.2",
     "webpack": "^5.81.0",
